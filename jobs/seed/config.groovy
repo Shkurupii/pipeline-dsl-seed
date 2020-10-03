@@ -6,18 +6,18 @@ try {
 }
 
 job_publisher_job = [
-  name:"job-publisher"+(flavour ? "-${flavour}" : ""),
-  dsl:(String)"${PROJECT_ROOT}/dsl/job-publisher.groovy",
+  name:"job_publisher"+(flavour ? "-${flavour}" : ""),
+  dsl:(String)"${PROJECT_ROOT}/dsl/job_publisher.groovy",
   pipeline:[
-      (String)"${PROJECT_ROOT}/pipeline/job-publisher.groovy"
+      (String)"${PROJECT_ROOT}/pipeline/job_publisher.groovy"
   ],
 ]
 
 job_publisher_stable_job = [
-  name:"job-publisher"+(flavour ? "-${flavour}" : "")+"-stable",
-  dsl:(String)"${PROJECT_ROOT}/dsl/job-publisher.groovy",
+  name:"job_publisher"+(flavour ? "-${flavour}" : "")+"-stable",
+  dsl:(String)"${PROJECT_ROOT}/dsl/job_publisher.groovy",
   pipeline:[
-      (String)"${PROJECT_ROOT}/pipeline/job-publisher.groovy"
+      (String)"${PROJECT_ROOT}/pipeline/job_publisher.groovy"
   ],
 ]
 
